@@ -161,7 +161,7 @@ void busFunc(int busnumber, char dir, int position)
                     {
                         sleep(2); //The junction is then told to wait for two seconds
                         sem_post(&westsem);//westsem is incremented
-                        sem_post(&southsem);//southsem is incremented
+                        sem_post(&northsem);//southsem is incremented
                         sem_post(&junctionsem);//junctionsem is incremented
                         printf("North, West and Junction semaphores have been released by process %d \n", getpid());
                         J = false; //Changes the value of the boolean variable to false to end the loop
